@@ -10,6 +10,6 @@ defaults:
     - decode: default
 task:
     name: CommonGEN
-    data_dir: /home/wuqy1203/Desktop/Projects/TextGAIL/data/${task.name}
+    data_dir: /lambda_stor/homes/pding/projects/G2LLM/TextGAIL/data/${task.name}
 
 # DailyDialog, CommonGEN, SNLI
