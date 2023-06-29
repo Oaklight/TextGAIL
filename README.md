@@ -4,13 +4,14 @@ This is the repository for the paper: TextGAIL: [Generative Adversarial Imitatio
 
 ## Requirements
 
-Recommend using conda env for this project.
+Recommend using conda env for this project. Python==3.10 at most for CUDA 11.3. Depending on NVCC version, you may need different version.
 
-Install TorchFly (https://github.com/qywu/TorchFly) first. Then `pip install -r requirements.txt`
-
-In the case of "Python.h" missing error when installing `fast-bleu`:
-- find Python.h in your env
-- `CFLAGS="-I/lambda_stor/homes/pding/mambaforge/envs/torchfly/include/python3.11" pip install fast-bleu`
+Sequence of dependency installation:
+- at project root directory, `mamba install python==3.10` (pip will be installed automatically)
+- `torch==12.1` via `mamba install pytorch==1.12.1 torchvision==0.13.1 cudatoolkit=11.3 -c pytorch`
+- `apex` according to instructions at https://github.com/NVIDIA/apex
+- TorchFly via `pip install -e ./TorchFly`
+- `pip install -r requirements.txt`
 
 ## Datasets
 
