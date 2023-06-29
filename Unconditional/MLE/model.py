@@ -5,7 +5,7 @@ from transformers import AutoTokenizer
 
 import torchfly
 from torchfly.nn.transformers import GPT2LMHeadModel
-from torchfly.training import FlyModule
+from torchfly.training import FlyModel
 from torchfly.nn.losses import SequenceCrossEntropyLoss
 from torchfly.metrics import Average
 from torchfly.common.download import get_pretrained_weights
@@ -13,7 +13,7 @@ from torchfly.common.download import get_pretrained_weights
 # pylint: disable=no-member
 
 
-class LanguageModel(FlyModule):
+class LanguageModel(FlyModel):
     def __init__(self, config):
         super().__init__(config)
         self.config = config
