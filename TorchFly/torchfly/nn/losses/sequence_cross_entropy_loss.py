@@ -57,7 +57,7 @@ def sequence_cross_entropy_with_logits(logits, targets, mask, label_smoothing, r
         # shape : (batch,)
         # we favor longer sequences, so we don't divide with the total sequence length here
         loss = loss.sum(1)  # / (mask.sum(1) + 1e-13)
-        if reduce is "batch":
+        if reduce == "batch":
             # shape : scalar
             loss = loss.mean()
     return loss
