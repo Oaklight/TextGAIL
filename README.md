@@ -4,7 +4,12 @@ This is the repository for the paper: TextGAIL: [Generative Adversarial Imitatio
 
 ## Requirements
 
-TorchFly (https://github.com/qywu/TorchFly) is needed for all dependencies. It is included in this repository.
+Recommend to use conda env for this project.
+Install TorchFly (https://github.com/qywu/TorchFly) first.
+Then `pip install -r requirements.txt`
+In case of "Python.h" missing error when install `fast-bleu`:
+- find Python.h in your env
+- `CFLAGS="-I/lambda_stor/homes/pding/mambaforge/envs/torchfly/include/python3.11" pip install fast-bleu`
 
 ## Datasets
 
