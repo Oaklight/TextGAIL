@@ -4,10 +4,11 @@ This is the repository for the paper: TextGAIL: [Generative Adversarial Imitatio
 
 ## Requirements
 
-Recommend to use conda env for this project.
-Install TorchFly (https://github.com/qywu/TorchFly) first.
-Then `pip install -r requirements.txt`
-In case of "Python.h" missing error when install `fast-bleu`:
+Recommend using conda env for this project.
+
+Install TorchFly (https://github.com/qywu/TorchFly) first. Then `pip install -r requirements.txt`
+
+In the case of "Python.h" missing error when installing `fast-bleu`:
 - find Python.h in your env
 - `CFLAGS="-I/lambda_stor/homes/pding/mambaforge/envs/torchfly/include/python3.11" pip install fast-bleu`
 
@@ -20,9 +21,11 @@ The datasets used in the paper can be found below:
 
 - **EMNLP2017 NEWS**: https://github.com/geek-ai/Texygen/tree/master/data
 
-- **ROCStories**: https://cs.rochester.edu/nlp/rocstories/
+- **ROCStories**: https://cs.rochester.edu/nlp/rocstories/ <br>
+  data downloaded from ROCStories data links are csv files with different columns. Need to check why that is the case.
 
-- **CommonGEN**: https://github.com/INK-USC/CommonGen
+- **CommonGEN**: https://github.com/INK-USC/CommonGen <br>
+  I haven't got the reply email from CommonGen for their data links.
 
 Then run the pre-processing script to get `train.jsonl`, `valid.jsonl`, `test.jsonl` for each dataset.
 The details can be found in the `data` folder.
