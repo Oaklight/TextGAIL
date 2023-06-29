@@ -25,7 +25,7 @@ The datasets used in the paper can be found below:
   data downloaded from ROCStories data links are csv files with different columns. Need to check why that is the case.
 
 - **CommonGEN**: https://github.com/INK-USC/CommonGen <br>
-  I haven't got the reply email from CommonGen for their data links.
+  https://drive.google.com/drive/folders/1R5R7lbbxmiRZVVuTIG_YI1WsoYkmbUpB
 
 Then run the pre-processing script to get `train.jsonl`, `valid.jsonl`, `test.jsonl` for each dataset.
 The details can be found in the `data` folder.
