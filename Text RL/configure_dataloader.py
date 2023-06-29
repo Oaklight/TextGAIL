@@ -41,15 +41,15 @@ class DataLoaderHandler:
 
     def train_dataloader(self, config):
 
-        train_filename = os.path.join(DATA_DIR, f"{config.task.name}/train.jsonl")
+        train_filename = os.path.join(config.task.data_dir, "train.jsonl")
         train_dataset = Seq2SeqDataset(train_filename, self.tokenizer)
         train_dataloader = DataLoader(
-            train_dataset, batch_size=config.training.batch_size, shuffle=True, collate_fn=lazy_collate
+            train_dataset, batch_size=config.training.training.batch_size, shuffle=True, collate_fn=lazy_collate
         )
         return train_dataloader
 
     def valid_dataloader(self, config):
-        valid_filename = os.path.join(DATA_DIR, f"{config.task.name}/val.jsonl")
+        valid_filename = os.path.join(config.task.data_dir, "val.jsonl")
         val_dataset = Seq2SeqDataset(valid_filename, self.tokenizer)
-        val_dataloader = DataLoader(val_dataset, batch_size=config.training.batch_size, collate_fn=lazy_collate)
+        val_dataloader = DataLoader(val_dataset, batch_size=config.training.training.batch_size, collate_fn=lazy_collate)
         return val_dataloader
